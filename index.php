@@ -1,6 +1,7 @@
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/calender.css">
 <!DOCTYPE HTML>
 <body>
     <form method="post" action="">
@@ -162,7 +163,7 @@ echo '<br>'; ?>
         var currYear = "2037";
         if (year < 1902 || year > currYear) {
             $('#calendar').hide();
-            alert(year + ' is an invalid year ! Enter a Valid Url');
+            alert(year + ' is an invalid year ! Enter valid Year from 1902-2037');
             $('#getYear').val('');
             $('#getYear').focus();
             return false;
@@ -177,84 +178,3 @@ echo '<br>'; ?>
     }
 </script>
 
-<style>
-
-    #calendar {
-        border: 1px solid black;
-        border-collapse: collapse;
-        width: 100%;
-        margin-left: -50px;
-    }
-    table,tr {
-        border-collapse: collapse;
-        border: 2px solid black;
-        border-color: #ccf2ff;
-        outline-width: thick;
-    }
-    .empty{
-        border: 2px solid black;
-        border-right:2px solid red; 
-        border-left:2px solid red; 
-        height: 11px;
-    }
-    #calendar th {
-        height: 50px;
-        text-align: center;
-        background-color: #004466;
-        color: white;  
-        font-family: sans-serif;
-        font-size: 25px;
-        border: 2px solid black;
-    }
-    #calendar td.weeknum{
-        height: 50px;
-        text-align: center;
-        color: #08840a; 
-        font-weight: bold;
-        font-family: sans-serif;
-        font-size: 21px;
-    }
-    #calendar tr.weekdays {  
-        height: 50px;
-        text-align: center;
-        background-color: #ff0000;
-        color: white;  
-        border: 2px solid black;
-        border-bottom:  none;
-        font-size: 25px;
-        font-family: sans-serif;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    form {
-        width: 450px;
-        margin: 0 auto;
-    }
-    .btncls{
-        margin-left: 85px;
-    }
-    input {
-        width: 20%;
-    }
-    input,select,button {
-        padding:3px;
-        margin: 0;
-        -webkit-border-radius:4px;
-        -moz-border-radius:4px;
-        border-radius:4px;
-        -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-        -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-        box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-        outline:none;
-        display: inline-block;
-        -moz-appearance:none;
-        appearance:none;
-        cursor:pointer;
-    }
-    /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-        input,select,button {padding-right:15px}
-    }
-</style>
